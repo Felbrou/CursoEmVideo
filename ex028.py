@@ -9,7 +9,7 @@ print ('**--**' * 9)
 n = int(input('Digite um número de 0 a 5: ')) #jogador tenta adivinhar
 x = random.randint(0,5) #computador escolhe um número em cache
 print('PROCESSANDO...')
-sleep(3)
+sleep(3) #para dar a impressão que o computador está pensando
 if n == x:
     print('PARABÉNS!!!Você conseguiu me vencer')
 else:
