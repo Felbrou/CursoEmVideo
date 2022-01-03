@@ -8,14 +8,16 @@ print("      VERISSIMO IMPORTS")
 print('----' * 8)
 total_sum, product_higher, product_lower, c = 0, 0, 0, 0
 product_lower_name = ''
-process = 'Y'
-while process == "Y":
+
+while True:
     product_name = str(input("Product Name >> ")).strip()
     product_price = float(input("Price[U$] >> "))
-    process = str(input("Continue?[Y/N] >>")).strip().upper()[0]
-    print('----' * 6)
-    total_sum += product_price
     c += 1
+    total_sum += product_price
+    process = ' '
+    while process not in 'YN':
+        process = str(input("Continue?[Y/N] >>")).strip().upper()[0]
+    print('----' * 6)
     if c == 1:
         product_lower = product_price
         product_lower_name = product_name.title()
